@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Prototype Inheritence  <span style="color: firebrick;">Function</span> constructor </h1>
+    Javascript is a Prototype based  Language Means Inheritence works by something called Prototypes. <br> that Means  each and every Javascript object has prototype Property Which makes Inheritence Possibble in Javasccript !! Each and Every object <br>which we Ever Create is an Instance of the Object Constructor. which has  a bunch of methods in its prototype property <br>
+    summary of Prototypes:-  <br>
+    1 : every javascript object has a Prototype Property , which makes inheritence Possible in javascript <br>
+    2 : The Prototpe Property of an Object where we put methods and Properties that we want Other Objects to inherit. <br>
+    3 : The Constructor Prototype property is not the prototype  of the Constructor itself but  also its the Prototype of all Instance that are created Through  it. <br>
+    4 :  when a certain Method or Property is called the <span style="color:  darkslateblue;">Search</span> starts in the object itself . <br>
+    and if it can't be found the search Moves on  to  the Objects Prototype this Continues untiil  the Method is <span style="color: firebrick;">Found</span> <br>
+    5 : This is called Prototype chain.
+
+    <h3>Function constructor</h3>
+
+    1 : first we create Function constructor which is also called Blue print using that blue print <br>
+    we use it to new Property which creates a brand new object this is important. <br>
+    2 : affter that we create a function  with arguments that we specified first object is created  than function is called as we know calling a functiion creates a new Execution  context with this keyword !! <br>
+    3: inn a regular function call this variable  points to the global object  thats what we not want so here this variable points to the empty object that was created in the beggining by new variable!! <br>
+    4 : so what New variable helps this variable instead of pointing to global object it points to the empty object which was created by New variable earlier. & than after that we set  the name, year , Job properties to this keyword.
+
+<button id= 'click'onclick="Pavan()">Click Me</button>
+
+
+    <script>
+
+        
+//     var john ={
+//         name : 'John',
+//         Job :'Web developer',
+//         yearOfBirth : 1992,
+
+//     };
+
+//     // Function constructor \|/
+//     var  Person = function (name,yearofBirth,job) {
+//         this.name =  name;
+//         this.yearofBirth = yearofBirth;
+//         this.job =  job;
+//       };
+//       Person.prototype.calculateAge = function () {
+//         console.log(2020 - this.yearofBirth);
+//       };
+
+//      Person.prototype.lastName = 'Dixit'; // adding property using  prototype
+//       var Pavan = new Person ('Pavan', 1992, 'Web developer')
+//       var Rock  = new Person ('Rock', 1958, 'wrestler')
+//       var  mark = new Person ('Mark', 1993, 'Designer');
+    
+// Pavan.calculateAge();
+// Rock.calculateAge();
+// mark.calculateAge();
+// console.log(Pavan.lastName);
+
+// console.log(Rock.lastName);
+
+
+
+
+
+// var Mango = {
+//     name :'Mangoo',
+//     season :  'Summer',
+//     TimePeriod : parseInt (3) ,
+//     BirthYear : parseInt(1900),
+
+// }
+
+// var Person = function (name,TimePeriod,season,BirthYear) {
+//     this.name = name;
+//     this.TimePeriod =TimePeriod ; 
+//     this.season = season;
+//     this.BirthYear = BirthYear;
+//     this.calcAge = function () {
+//         console.log(2020-BirthYear);
+//       }
+// } 
+// Person.prototype.lastName = 'Juice';
+// var Mango =  new Person ('Mango' , 3, 'summer', 1900 );
+// var apple  = new Person ('Apple', 6, 'winter', 1820);
+// Mango.calcAge();
+// apple.calcAge();
+
+
+
+
+var Movie = {
+    FullName : 'Shahrukh Khan',
+    Place : 'Mumbai',
+    job  : 'Actor',
+    yearofBirth : 1962,
+}
+
+var Person =function ( name , Job,Place){
+   this.name = name,
+   this.Job = Job,
+   this.Place = Place
+}
+
+
+
+
+var Amir = new Person('AMirkhan', 'Actor',1965)
+var Pavan = new Person ('Pavan Dixit', 'Web developer' , 1992)
+
+console.log(this.Amir);
+ console.log(this.Pavan);
+
+// var Pavan = {
+//     name : 'Pavan',
+//     yearOfBirth : 1992,
+//     job : 'Web developer'
+// }
+
+// Function Constructor
+var Person = function (name , yearOfBirth , Job) {
+    this.name = name;
+    this.yearOfBirth = yearOfBirth;
+    this.work = Job;
+  }
+
+  var Pavan  = new Person ('Pavan', 1992, 'Web developer')
+  var kalam =  new Person ('Abdul Kalam' , 1932, ' Indian Scientist')
+  console.log(Pavan)
+
+  Person.prototype.lastName = 'Jenulabudhin'
+  console.log(kalam);
+
+
+
+
+    </script>
+</body>
+
+</html>

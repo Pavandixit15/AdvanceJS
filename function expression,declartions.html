@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Note :- In  function expression while using  switch statement we dont use Break, because  when we hit the return keyword here then we return whatever we define after it and even function also immediately finishes so  Basically it immediately go out of the function  and return to  the place where we actually called the function <br> so return Keyword doesn't only return the value but also  immediately finishes the function, so we dont need break here  <br> we can always see a function like a Machine which that receives something and does  something with data and Gives back something different <br> : statements and Expressions they don't only apply to functions but they are a global concept in javascript <br>
+    :- difference between statement and expression is So, javascript expression are a Piece of code that always Produce  a value and it doesn't matter how long  they are as long as the code results in a  Single Value, and  then it is an Expression    
+    </h3>
+    <script>
+// function Declaration 
+
+function Declaration(job,firstName){
+    //this is function declaration
+}
+
+// function Expression
+var whatdoYoudo = function (job,firstName) { 
+    switch(job){
+        case 'Web developer': 
+        return firstName + ' works as a Professional ' + job;
+
+        case 'Designer':
+        return firstName + ' works as a Professional ' + job;
+
+        case 'Teacher'  : 
+        return firstName +  ' works as a Professional ' + job;
+
+        default  : 
+        return  firstName + ' Does something Else '
+    }
+
+ } 
+
+ console.log (whatdoYoudo('Web developer' , 'Pavan'))
+ console.log (whatdoYoudo('Teacher' , 'Pavan'))
+ console.log (whatdoYoudo('Designer' , 'Pavan'))
+
+    </script>
+</body>
+</html> 

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<p>The function calling function <br>
+
+:- function returning functions  <br>
+:-  A  function is an instance of  an Object <br>
+:- A function behaves like an Object <br>
+ :- we can also store  a function  in a variable <br>
+:- we can also return  a function from another function <br>
+: - we can Pass a function as an argument into another Function <br>
+
+because of all  this we call functions as an First class Function</p>
+    <input type="text" value="EnterPlace" id="ind" onclick="states()">
+    
+    <script>
+
+
+
+
+
+
+
+// var DOBS = [1990,1992,1993,1994,1995];
+// function arrayCalcAge(years,fntn) { 
+//     var agesArr = [];
+//     for(var i=0 ; i < years.length ; i++ ){
+//         agesArr.push(fntn);
+//     }
+//     return agesArr;
+//  }
+
+//  function calculateAge(element) { 
+//      return 2020-element
+//   }
+//   console.log(arrayCalcAge(DOBS,calculateAge));
+
+
+
+
+// using map operator
+
+var DOBS = [1990,1992,1991,1993,1994];
+var ages = DOBS.map(dob =>  2020-dob);
+console.log(ages);
+
+
+//   var Names = [1989,1999,2009,2019,2029];
+
+//   function arrayCalcAge(years , ages){
+//       var agesArr = [];
+
+//       for(var i=0 ; i < years.length ; i++){
+//           agesArr.push(ages(Names[]));
+//       }
+//       return agesArr;
+//   }
+
+//   function calculateAge(element) {
+//       return 2020-element
+//     }
+//     console.log(arrayCalcAge(Names,calculateAge));
+
+// var DOBS = [1990,1991,1992,1993,1994,1995];
+// function arrayCalcAge(years,fntn) { 
+//     var agesArr = []
+//     for (var i=0 ; i < years.length ;  i++){
+//         agesArr.push(fntn (years[i]) ) 
+//     }
+//     return agesArr;
+//  }
+
+//  function calculateAge (element) { 
+//      return 2020-element
+//   }
+//   console.log(arrayCalcAge(DOBS,calculateAge))
+
+
+// Function Returning Function
+
+// function interviewQuestions(job) { 
+
+//     if(job === 'Engineer'){
+//         return function (name) { 
+//             console.log(name + ' Are You a' + job)
+//          }
+
+//     } else if(job === 'teacher'){
+//         return function (name) { 
+//             console.log(name + ' Are You a ' + job)
+//          }
+//     } else if (job === 'Developer'){
+//         return function (name) { 
+//             console.log(name + ' Are You a ' + job)
+//          }
+//     } else if (job === 'Designer'){
+//         return function (name) { 
+//             console.log(name + ' Are you a ' +  job)
+//          }
+//     }
+// }
+
+// var PavanQuestion =interviewQuestions('Developer')
+// console.log(PavanQuestion ('Pavan'));
+
+
+// tasks in array
+
+
+var arr = [1,2,1,2,1,2,3,4,5]
+
+
+var uniq =  [];
+var Dup = [];
+
+for(let no of arr){
+    if (!uniq.includes(no)){
+        uniq.push(no);
+    }else{Dup.push(no)}
+
+}
+
+console.log(arr);
+console.log(uniq);
+console.log(Dup);
+
+
+var numbers = [1,2,1,3,4,3,4,5,6,7,4,6]
+
+var unik = [];
+var dop = [];
+
+for (let no of arr){
+    if(!unik.includes(no)){
+        unik.push(no);
+    } else{dop.push(no)}
+}
+
+console.log(numbers);
+console.log(unik);
+console.log(dop);
+// var uniq =  [];
+// var dup = [];
+// for  (let no of arr){
+//     if  (uniq.includes(no)){
+//         uniq.push(no);
+//     } else{dup.push(no)}
+// }
+
+// console.log(arr);
+// console.log(uniq);
+// console.log(dup);
+// var PavanQuestion =interviewQuestions( 'Developer');
+// console.log(PavanQuestion);
+
+
+
+// var DOBS = [1990,1992,1992,1993,1994];
+// function arrayCalcAge(years,fntn) { 
+//     var agesArr = []
+//      for (var i=0 ; i < years.length ; i++){
+//          agesArr.push (fntn (years[i]))
+  
+//         }
+//         return agesArr;
+
+//  }
+
+//  function calculateAge (element){
+//      return 2020 - element
+//  }
+
+//  console.log(arrayCalcAge(DOBS , calculateAge));
+
+        // var DOBS = [1991,1992,1993,1994,1995];
+
+        // function arrcalcAge(years, fntn) { 
+
+        //     var agesArray = [];
+        //     for (var i=0 ; i<years.length; i++){
+        //         agesArray.push(fntn(years[i]));
+        //     }
+        //     return agesArray;
+        //  }
+
+        //  function calulateAge(element) {
+        //      return 2020-element
+        //    }
+        //   console.log (arrcalcAge(DOBS ,calulateAge))
+
+
+
+
+        // function interviewQuestions(job) {
+        //     if(job === 'designer'){
+        //         return function (name) {
+        //             console.log(name + 'can You please xplain what  UI design is');
+        //           }
+        //     } else if (job === 'teacher'){
+        //         return  function (name) { 
+        //             console.log('What subject do  you teach' +  name + '?');
+        //          }
+        //     } else {
+        //         return function (name) { 
+        //             console.log('hello' + name + 'what  do  you do')
+        //          }
+        //     }
+        //   }
+        //   var teacherQuestion = interviewQuestions('teacher');
+        //   var designerQuestion = interviewQuestions('designer')
+        //   teacherQuestion (' '+'john');
+        //   designerQuestion('Pavan' + ' ');
+        //   var  developerquestion = interviewQuestions('developer');
+        //   developerquestion(' ' + 'jane' + ' ');
+        //   interviewQuestions('teacher')(' '+ 'mark')
+
+
+
+        //   function states(places) {
+        //         if (places === 'Hyderabad'){
+        //             return function (name) {
+        //                 alert(name + 'Hyderabad is Famous For charminar')
+        //               }
+        //         }else if  (places === 'Mumbai'){
+        //             return function (name) {
+        //                 alert(name + 'Mumbai  is Famous for Hotel TAJ')
+        //               }
+        //         } else if (places === 'kerala'){
+        //             return function (name) { 
+        //                 alert(name + 'kerala is famous for Nature')
+        //              }
+        //         } else{
+        //             return function (name) {
+        //                 alert (name +  'where are you  From')
+        //               }
+        //         }
+        //     }
+        //     document.getElementById('ind')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

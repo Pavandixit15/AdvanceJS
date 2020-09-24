@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>JavaScript is designed on a simple object-based paradigm. An object is a collection of properties, and a property is an association between a name (or key) and a value. ... In addition to objects that are predefined in the browser, you can define your own objects.</h3>
+
+
+    <script>
+
+        // Object Literal
+        var Pavan ={
+            firstName : 'Pavan',
+            lastName : 'Dixit',
+            birthYear : 1992,
+            family :  ['Mom','dad','brother','sister'],
+            job : 'developer',
+            isMarried : false
+        };
+
+        console.log(Pavan.family);
+        console.log(Pavan['lastName']); // another way to console
+        var x = 'birthYear';
+        console.log (Pavan[x]); // another way to console in objects
+
+        Pavan.job = 'Web-Developer'
+        Pavan.isMarried = true;
+        console.log(Pavan)
+
+
+
+        // creating object syntax by using new  keyword
+        var jane = new Object ();
+        jane.firstName = 'Jane';
+        jane['lastName'] = 'Smith';
+        jane.job = 'Designer';
+        jane.birthYear =1994;
+        console.log(jane);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

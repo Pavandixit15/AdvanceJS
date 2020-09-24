@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        var john = {
+            name: 'john',
+            age: 28,
+            job: 'Web developer',
+            presentation: function (style, timeoftheday) {
+                if (style === 'Formal') {
+                    console.log('Good' + timeoftheday + ',ladies and gentlemen ! I am ' + this.name + 'I am ' + this.job + 'I am ' + this.age + 'Years OLD')
+                } else if (style === 'Friendly') {
+                    console.log('Hey whats up' + 'I am ' + this.name + 'I am ' + this.job + 'I am ' + this.age + 'Years OLD' + 'Have a nice day')
+                }
+            }
+        }
+
+
+        var Pavan = {
+            name: 'Pavan',
+            age: 28,
+            job: 'Developer',
+            Presentation: function (style, Greeting) {
+                if (style === 'Formal') {
+                    console.log('Hi i am ' + this.name + ' i am  ' + this.age + ' years Old ' + '   i am Your new  ' + this.job + Greeting + ' Everyone ')
+                } else if (style === 'Friendly') {
+                    console.log(' Hey whtsapp  ' + this.name + ' i am ' + this.age + ' years Old ' + '  i am Your new ' + this.job + Greeting + ' Everyone ')
+                }
+            }
+        }
+        Pavan.Presentation('Friendly', 'Goodmorning');
+
+
+        var Umesh = {
+            name: 'Umesh',
+            age: 28,
+            job: 'Developer',
+
+        }
+        Pavan.Presentation.call(Umesh, 'Formal', 'Good Afternoon')
+
+
+        //  Filter ,  map  ,for each method
+
+        var array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        array.forEach(function (currElement, currentIndex, WholeElement) {
+            console.log(currElement + 1);
+        })
+
+
+
+        var arr = ['Pavan', 'Dixit', 'Umesh', 'Prasad'];
+        arr.forEach(function (current, curindex, wholele) {
+            console.log(current);
+
+
+//          });
+
+//          var obj = {
+//   x: 81,
+//   getX: function() {
+//     return this.x;
+//   }
+// };
+
+// alert(obj.getX.bind(obj)());
+// alert(obj.getX.call(obj));
+// alert(obj.getX.apply(obj));
+
+
+        //  var  Emily = {
+        //      name : 'Emily', 
+        //      age : 27,
+        //      job : 'Web designer'
+        //  };
+
+        //  john.presentation('Formal', 'morning')
+        //  //If u want to use the Presentation methodin emily object which is in the John object we can use Call  Method This is called Method Borrowing we borrowed the Method from john
+
+
+        //  john.presentation.call(Emily , 'Friendly', 'Afternoon')
+
+        // //  john.presentation.apply(Emily, ['Friendly', 'Aftrnoon']);
+
+        // var JohnFriendly = john.presentation.bind(john , 'Friendly');
+        // JohnFriendly ('morning');
+        // JohnFriendly ('Night') 
+
+</script>
+
+</body>
+
+</html>

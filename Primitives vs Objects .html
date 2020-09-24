@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Notes of Primitives vs Objects </h2>
+    :- so big differences  between Primitives and Objects is that Variable containing Primitives actually <b>Hold the data inside  of the variable </b> itself . <br> but in <b>Objects</b> its very Different <b>Variables associated with Objects</b> don't actually contain the object . but instead they contain  a refrence  <br> to the place in memory Where the Object sits ,  where the objects is stored . <br>
+
+    :- So variable declared as an Object doesn't have a Real copy of objectit just Points to that Object <br> <br>
+
+ 
+    :- while coming to <b>objects</b> from line number 27 !! in  that we said Obj1 is equal to obj2 wedid not created a <b>new</b> object, even no coopy was created here all that we did is created a new refrence which Points to the First Object .<br> So the Obj1 and Obj2 variables are both holds the refrence that Point to the exact same object in  the  memory .and thats why when we change the age in object1 this change is also Reflects in the Obj 2 because infact its the exact same  object . 
+
+    :- while coming to functions at line  number 53 , we have the  same thing here we pass the age variable holding a primitive  data and the object  variable holding a refrence to object into our function . <br>
+
+    :- this Function then as it was invoked attemptted to change the arguments that we passed into it , So when we then Console  the values we see the same thing as before and that is that  Primitive has remained unchanged but the city and object from given value to mutated value . <br>
+    
+    :- so this shows us when we pass Primitive into Function A simple Code is created , So we can change <b> A</b> as much as we want it will never  affecct the variable outside because it is primitive <br>
+     
+    :- but when we Pass Object it's not really the Object that we Pass but the refrence to the Object ,  So  again we don't pass an Object into the function but only the reference that Pointts to the Objects <br>
+    :- So when we then change the Object inside the function it is Still  reflected Outside of the function , it leads to some interested result and some strange bugs and it is important 
+
+
+    <script>
+
+        // Primitive
+        var a = 23;
+        var b = a;
+        var a = 50;
+        console.log(a, b);
+
+        // objects
+        var obj1  = {
+            name  : 'john',
+            age :  26
+        };
+         var obj2  = obj1;
+         obj1.age = 28;
+
+         console.log(obj1.age);
+         console.log(obj2.age);
+
+        // functions
+
+        var age = 27;
+        var  jake ={
+            
+            name : 'jonas',
+            city : 'lisbon'
+        };
+
+        var jane = {
+            name : 'Jane',
+            cityy : 'hyderabad',
+
+        }
+        function change(a,b) { 
+            a =30;
+            // b.city = 'San Fransisco',
+            b.cityy = 'Amsterdam'
+
+         }
+
+
+
+
+         change(age , jane); //he called obj from line 49 in to function calling how  ?
+         console.log(age);
+        //  console.log(jake.city);
+         console.log(jane.cityy);
+
+         var obj1 ={
+             name : 'Shravan',
+             city : 'hyderabad',
+             age : 27
+         };
+         var obj2 = obj1;
+         obj1.age = 28;
+         console.log(obj1.age)
+         console.log(obj2.age);
+
+
+
+
+
+         var Me = 28;
+         var obj = {
+             name : 'Pavan',
+             Place : 'Hyderabad'
+         };
+
+         function change(a,b) { 
+             a = 27;
+             b.Place = 'Mumbai'
+          }
+          change(age,obj);
+          console.log(Me)
+          console.log(obj.Place);
+
+
+
+
+
+//   function multiply(a, b){
+//  return a * b;
+// }
+// var total = multiply(10,2);
+// console.log(total);
+
+
+
+         /*function exchange(age,name,city) {
+            this.age = age;
+            this.name = name ; 
+            this.city = city;
+          }
+          exchange(28,'Pavan', ' Hyderabad')
+
+        function change (a,b){
+            a = 30;
+            exchange.city = 'Mumbai'
+        };
+
+        change (exchange.age , exchange);
+        console.log(age);
+        console.log(exchange.city); */
+
+
+
+
+        // objects 
+
+       /* var Obj1 = {
+            name : 'John',
+            age : 25,
+        };
+
+        var  obj2 = Obj1;
+        Obj1.age = 28;
+        Obj1.name = 'Pavan'; //2nd time mutatiion 
+        var  obj3 = obj2;
+        obj3.name = 'Dixit';  // 3rd time mutation
+        console.log(Obj1.age);
+        console.log(Obj1.name);
+        console.log(obj2.age);
+        console.log(obj3.name);
+
+        // Functions 
+
+        var age = 27;
+        var obj =  {
+            name  :  'Pavan',
+            Place :'Hyderabad',
+        };
+
+        function change(a,b) { 
+            a = 28;
+            b.Place = 'Mumbai';
+         }
+         change (age , obj);
+
+         console.log(age);
+         console.log(obj.Place); */
+
+
+
+
+
+    </script>
+</body>
+</html>

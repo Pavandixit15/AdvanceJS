@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>
+        The rest Parameters Allows to represent an indefinite number of arguments as an array
+    </h2>
+
+    <script>
+        function Name(a, ...args) { //..args RestParameters shud be at last in  Parameters 
+
+            document.write(a + '<br>');
+            document.write(args);
+
+        }
+        Name('Pavan', 'Pallavi', 'Prashant');
+
+
+        //  function Name2(a,b,c) { 
+
+        //      console.log(Name2)
+        //   }
+        //   Name2()
+
+    </script>
+
+</body>
+
+</html>

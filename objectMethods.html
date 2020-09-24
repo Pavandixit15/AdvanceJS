@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+var Pavan =  {
+        firstName : 'Pavan',
+        lastName  : 'Dixit',
+        job : 'Web - developer',
+        isMarried : false,
+        yearofBirth :1992,
+        calcAge :  function(yearofBirth){
+            this.age = 2020-this.yearofBirth;
+        }
+
+    };
+
+ Pavan.calcAge();
+    console.log(Pavan)
+
+    // console.log(Pavan.calcAge(1992));
+    // console.log(Pavan);
+
+// coding challenge 4 
+
+var johnBmi = {
+    fullName : 'John',
+    Mass : 20,
+    height: parseFloat(5.4),
+    calcBmi : function () {
+        this.bmi = this.mass / (this.height * this.height);
+        return this.bmi;
+      }
+};
+
+var markBmi = {
+    fullName : 'Mark',
+    mass :22,
+    height : parseFloat(5.5),
+    calcBmi : function () {
+        this.bmi = this.mass / (this.height * this.height);
+        return this.bmi;
+      }
+
+};
+
+
+johnBmi.calcBmi();
+markBmi.calcBmi();
+console.log(johnBmi,markBmi);
+
+
+// if (johnBmi > markBmi){
+//     console.log('John is stronger than Mark')
+// }else{
+//     console.log('Mark is stronger than John')
+// }
+
+
+
+
+
+
+
+
+    </script>
+ 
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Destructuring gives us a very convienient way to extract data from a dataStructure like  an object or an Array</h2>
+
+    <script>
+        // ES5
+
+        var  john = ['John' , 28];
+        var name1 = john[0];
+        var Age = john[1];
+
+        // ES6
+
+        const [Name2 , Year] = ['John', 28];
+        console.log(Name2);
+        console.log(Year);
+
+
+
+        // using Objects
+        const obj =  {
+            firstName : 'Pavan',
+            lastName : 'Dixit'
+        };
+        const{firstName, lastName} = obj;
+        console.log(firstName);
+        console.log(lastName);
+
+
+        // Different way of Destructuring 
+        const  {firstName : a , lastName :b}=obj;
+        console.log(a);
+        console.log(b);
+
+
+
+        function calcRetirement(year) { 
+            const age =  new 
+            Date().getFullYear()-year;
+            return [age , 65-age];
+         }
+
+    
+
+        const [age2,retirement]=calcRetirement(1990);
+        console.log(age2);
+        console.log(retirement)
+
+
+    </script>
+</body>
+</html>

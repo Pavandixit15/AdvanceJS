@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+<!-- call apply bind -->
+
+
+ <script>
+/*var Pavan ={
+    name : 'Pavan',
+    job : "web developer",
+    age : 28,
+    Presentation : function(style,timeofday,Place){
+        if(style==='formals'){
+            document.write('hey'+' '+ timeofday+ ' '+this.name +" "+ 'hey ur looking great in formals i am ' + this.job +' and my age is '+ this.age + 'and i lives in' + Place);
+
+        } else if(style=== 'casuals'){
+            document.write('hey Good'+  timeofday + ' ' + this.name  +"  "+ 'in casuals u look modern i am' + this.job+ ' and my Age is '+ this.age);
+        }
+    } 
+}
+
+
+var Emily ={
+    name : 'Emily',
+    job : 'Designer',
+    age : 26,
+}
+
+
+var Rock ={
+    name : 'Emily',
+    job : 'Wrestler',
+    age : 26,
+}
+Pavan.Presentation('formals','Goodmorning');
+Pavan.Presentation.call(Emily,'casuals','Afternoon');
+Pavan.Presentation.call(Rock,'Formals','Night','America'); */
+
+
+
+
+//  youtube example of call  apply bind
+
+function f1(arg1,arg2) {
+    document.write(this.name+'  '+this.name1)
+    console.log(arg1);
+    console.log(arg2);
+  }
+  
+
+// var name = 'Dixit';
+f1.call({
+    name : 'Javascript',
+    name1 : 'React Js',
+});
+f1.call({name : 'Angular'},'Pavan','Dixit');
+f1.apply({name : 'Angular'},['Pavan','Dixit']);
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>
+        Object .Create
+    </h2>
+    1:- the difference between object.Create and function Constructor pattern is that the object.create builds an objects that <br>
+    inherit directly from the one that we passed into the first argument While on the other the function Constructor the Newly Created object inherits from  the Constructors prototype property so thats   the big difference.
+    <script>
+        var personproto =  {
+            calculateAge : function () {  console.log(2020-this.yearofBirth);
+             }
+        };
+
+        var john = Object.create(personproto);
+        john.name = 'john';
+        john.yearofBirth = 1992;
+        john.job ='web developer';
+        
+
+        var jane = Object.create(personproto,
+        {
+            name : {value : 'Jane'},
+            yearofBirth : {value : 1969},
+            job : {value :  'Designer'},
+            
+        }
+        );
+        console.log(this.name);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Imediately invoked Function Expression (IIFE)</h1> <br>
+
+    := it is basically used for data Hidden or data Privacy with an anonymous Function where we can't call that function; <br>
+    
+    the variable defined inside of the function cannot be accesed ouside of the function because the scoping chain only works the other way around. <br>
+
+
+    :- if the only Purpose is to hide the score variable from  the outside it  means  creating a Private variable; it can be  done by suing IIFE line number 39; <br>
+
+
+    :-  how IIFE works if you write a function which is normally used then javascript Parser thinks that this is a function declaration and since we didn't have any name for the function declaration it will throw an error; <br>
+
+    :- so basically we need to trick the Parser and make it beleive that here we have here is an expression not a declaration and the solution is to wrap up the entire thing into () Parenthesis; <br>
+
+    :-Because in JS whats inside the Parenthesis  cannot be a statement and Like this JS will know that it shud treat this as expression not declaration 
+    and then after  that we only have to invoke  the function because we didn't do  this so  it will be  like  this without the parenthesis tthe it would never be called  and never do anything then since we never attached a variable then nothing would happend
+
+    :-Then we no longer has access the variable inside to outer  variable so we created  <b>data Privacy here</b>  We can also Pass arguments inside the IIFE function line number 58 <br>
+
+    :- and  with this We obtain data Privacy here and We dont interfere with  other variables in  our global execution context ;
+
+    this code is not for Reuse  but this is for  dataPrivacy.
+    
+
+
+
+
+
+
+    <script>
+
+
+        // // normal Function 
+
+        // function game() {
+        //     var score = Math.random()*10;
+        //     console.log(score >= 5);
+        //   }
+        //   game();
+
+
+
+        // //    IFFE function 
+
+
+        // (function (){
+        //     var Score = Math.random()*10;
+        //     console.log(Score);
+        // }) ();
+
+
+        // Pass arguments inside the IIFE function ;
+
+(function (name) {
+    Myname = name ;
+    return Myname ;
+    
+  }) ('Pavan');
+  console.log(Myname);
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

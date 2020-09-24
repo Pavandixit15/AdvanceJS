@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>A closure is a feature in JavaScript where an inner function has access to the outer (enclosing) function's variables — a scope chain. The closure has three scope chains: it has access to its own scope — variables defined between its curly brackets. it has access to the outer function's variables</h4> 
+So in here in this Function we use the <b>RetirementAge</b> Parameter of this <b>Outer Function here</b>
+    and also  that A variable that is also <b>Declared outside of the anonymous Function </b> and still when we run this , This Works So someHow we are able to  still use the variables even Even after the retirement function which Declares these variables already stopped its execution.
+    <h4>So  our Inner Function here is able to use the retirement variable and <b>A</b> variable of this Function here that is already gone , it has already returned , But somehow the variables are still there and  this is the <b>CLOSURE</b></h4>
+
+        <h1 style = "<i class="fa fa-align-center"></i>">How Closure Works </h1>
+        <h4> :- The inner functions has always access to the  variables and parameters of its outer function even after the Outer function  has returned</h4>
+            <p>Let see what happens when we  calls retirement Function  <br> :- As we already know a new function creates a new Execution context that is Put on  the top of the Execution stack <br>
+            :- That Execution Context has an object that  store the variables ,the Scope Chain Ended  this Variable
+            </p>
+
+    <script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+                             
+            //  function retirement(retirementAge){
+            //      var a =  'Years Left for Retirement';
+            //      return function (yearofBirth) {
+            //          var age = 2020-yearofBirth;
+            //          console.log((retirementAge - age) + a)
+            //        }
+            //  }
+            // var  retirementUS = retirement(60);
+            //         retirementUS(1992);
+
+            //         retirement(66)(1990);
+
+
+                /*
+                    function interviewQuestion (job){
+                        var a = 'Do you work as a'
+                        return function (Experience){
+                            var age = 2020 - Experience;
+                            console.log((job - Experience) + a)
+                        }
+                    }
+
+                    var development = interviewQuestion('Web developer')
+                        interviewQuestion(1999);    */
+
+
+                    function interviewQuestions(job){
+                        // var a = 'I am From outer function'
+                        return function (name) { 
+                            if (job === 'teacher'){
+                                console.log(name + ' whats your Profession ? ' + job )
+                            } else if(job === 'Engineer'){
+                                console.log(name  + ' are You an ' + job )
+                            } else{name + 'What You do'}
+                         }
+                    }
+                    var PavanQuestion = interviewQuestions('Engineer') ('Pavan');
+                    var Myquestion = interviewQuestions('teacher') ('sa');
+
+
+
+
+                    function DOB (yearofBirth){
+                        var a = 'Your  date Of birth is '
+                        return function (DateofBirth){
+                            var age = 2020-yearofBirth;
+
+                            console.log((yearofBirth - age) + a)
+                        }
+
+                    }
+                    var PavanDOB = DOB(28)
+                    console.log(PavanDOB);
+                    PavanDOB(1992);
+
+
+                    function retirement (retirementAge) { 
+                        var a = 'Years For retiring'
+                        return function (yearofBirth) {
+                            var age = 2020-yearofBirth;
+                            console.log((retirementAge - age) + a)
+                        }
+                     }
+                     var  Result = retirement(65)
+                     Result(1992);
+                     console.log(Result)
+
+
+                    function retirement(retirementAge){
+                        var a = 'Years  For retirement'
+                        return function (yearofBirth){
+                            var age = 2020-yearofBirth;
+
+                            console.log((retirementAge - age) +a);
+                        }
+                    }
+
+                    var retirementUS = retirement(66);
+                    console.log(retirementUS)
+                    retirementUS(1992);
+
+
+                    // function retirement(retirementAge) {
+                    //     var a = " Years For Retirement "
+                    //     return function (yearofBirth) { 
+                            
+                    //         var age = 2020-yearofBirth;
+                    //         console.log((retirementAge - age) + a);
+                    //        }
+
+                           
+                    //   }
+
+
+                    //   var  Retiring = retirement(60);
+                    //   Retiring(1978);
+
+                    //   var RetireUSA = retirement(65)
+                    //   RetireUSA(1987)
+
+                    //   var RetireIndia = retirement(62);
+                    //   RetireIndia(1992)
+
+                    //   retirement(66)(1970); //another way of calling the closure function
+    </script>
+</body>
+</html>

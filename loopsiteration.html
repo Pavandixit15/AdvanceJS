@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Imagine we have repetative code  instead of writing 10 lines of code we use loops, So basically it  is usefull  for  repetative tasks using loops</h3>
+
+
+    <script>
+
+        // for(var i=0; 0<10 ; i+=2){
+        //     console.log(i);
+        // }
+        
+        // i=0 , 0 < 10 it is true , log i to console , i++
+        // i=1 ,  1<10 it is true , log i to console , i++
+        // .... continues
+        // i=9 , 9<10 true , log i to console , i++
+        //  i=10, 10<10 false , exit from the loop!
+
+        var Places =['London', 'Amsterdam', 'Mumbai','Banglore','Hyderabad']
+
+        for(i=0; i<Places.length; i++){
+            if(typeof Places[i] !== 'String') continue;
+            console.log(Places[i]);
+        }
+
+        
+        // for(i=0; i<Places.length; i++){
+        //     if(typeof Places[i] !== 'String') break;
+        //     console.log(Places[i]);
+        // }
+
+
+// looping backwards
+
+// for (var i=Places.length-1; 1>=0; i--){
+//     console.log(Places[i])
+// }
+
+
+
+        // while loop
+
+        // var i=0;
+        // while(i<Places.length){
+        //     console.log(Places[i])
+        //     i++;
+
+        // }
+
+        //   coding challenge 4
+
+         var john ={
+                fullName :  'John Smith',
+                bills : [124,48,268,180,42],
+                calcTips : function () {
+                    this.tips = [];
+                    this.finalValues = [];
+                    for(var i=0 ; i<this.bills.length ;  i++){
+
+                        var percentage ;
+                        var bill = this.bills[i];
+
+                        if (bill[i] < 50 ){
+                            percentage = .2;
+                        } else if (bill [i] >= 50 &&  bill[i] < 200){
+                            percentage = .15
+                        } else(
+                            percentage = .1
+                        )
+                        this.tips [i] = bill * percentage;
+                        this.finalValues [i] = bill + bill* percentage;
+                    }
+                  }
+
+            }
+            john.calcTips();
+            console.log(john)
+    </script>
+</body>
+</html>

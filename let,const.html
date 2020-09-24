@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Const variable is immutable it remains Constant and we use let if we want to change value , Variable declared in
+        ES5 is Function Scoped and let const declared in es6 are Block scoped</h1>
+    <h1>VAriables are always Function scoped and Let are Block Scoped</h1>
+    <script>
+
+
+
+
+        let array = [1,2,3,1,2,3,4];
+
+        let uniq=[];
+        let dup = [];
+
+        for (let arr of array){ 
+            if (!uniq.includes(arr)){
+                uniq.push(arr);
+            } else{
+                dup.push(arr);
+
+            }
+
+            console.log(uniq);
+            console.log(dup);
+
+        }
+
+
+
+
+        const DOBS = [1990,1991,1992,1993,1994]
+        // fibonaaci Series
+
+
+        // const fib = (n) => {
+        //     const fibarray = [0,1];
+        //     for (var i=2 ; i<n ; i++){
+        //         fibarray.push(fibarray[i-2] + fibarray[i-1]);
+        //     }
+        //     return fibarray;
+        // }
+
+        // console.log(fib(10));
+
+
+        // const fiib = function (m) {
+        //     const fiibar = [0,1];
+        //     for (var i=2 ; i<m ; i++ ){
+        //         fiibar.push(fiibar[i-2] + fiibar[i-2]);
+        //     }
+
+        //     return fiibar;
+        //   }
+
+        //   console.log(fib(15));
+
+
+
+        // Let and Const cannot be hoisted they are Block scopes
+
+        function driversLicense(PassedTest) {
+            if (PassedTest) {
+                var firstName = 'Pavan'
+                var LastName = 'Dixit'
+                console.log(firstName + LastName);
+            }
+        }
+        driversLicense(true);
+
+
+        // var numbers = [11,12,13,14,15,16,17];
+
+        // console.log (numbers.findIndex( cur => cur > 14))
+
+
+
+
+      
+
+        function fi() { 
+            var a =10;
+            console.log(a);
+
+         }
+         fi();
+
+
+
+         function first(){             
+             {
+                 let Money = 'Rupee'
+                 console.log(Money);
+             }
+             
+             
+         }
+         first();
+
+
+
+             let firstName = 'Pavan';
+             let LastName = 'Dixit';
+             let fullName = `${firstName} ${LastName}`;
+             console.log(fullName);
+             //Methods used in console for string literals
+             console.log(fullName.startsWith('P'))
+             console.log(fullName.endsWith('t'))
+             console.log(fullName.includes('a'))
+             console.log(fullName.repeat(5))
+         function calculateAge(DOB) { 
+            //  console.log(firstName);
+             return 2020-DOB; // whenever we return  that execution context will be cleared i mean it is stored in that return so console can't be done after the return of statement
+          }
+        //   calculateAge(1992);
+
+          console.log(`hi  am  ${firstName}  ${LastName} and my  age is ${calculateAge(1992)} old`)
+
+        //  function MyPlace(name,Place) {
+        //     this.name= 'Pavan';
+        //     this.Place = 'Hyderabad'
+            
+        //    }
+        //  MyPlace('Pavan', 'Hyderabad')
+        //  console.log(MyPlace);
+
+
+
+
+        
+        // // moving duplicatesinto another array
+        // var array1 = [1,2,3,4,5,6,1,2,3];
+        // let unik = [];
+        // let dup = [];
+        // for (var i=0; i<array1.length ; i++){
+        //     if (unik.indexOf(array1[i])=== -1){
+        //         unik.push(array1[i])
+        //     } else{
+        //         dup.push(array1[i]);
+        //     }
+        // }
+        // // console.log(unik);
+        // // console.log(dup);
+
+        // for (let cur of array1){
+        //     if(!unik.includes(cur)){
+        //         unik.push(cur);
+        //     } else{
+        //         dup.push(cur);
+        //     }
+        // }
+
+        //     console.log(unik);
+        //     console.log(dup)
+        // // it will iterate through  an  array 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+        // // es5
+        // var name5 = 'Pavan';
+        // var age = 22;
+        // name5 = 'Pavan Dixit'
+        // console.log(name5);
+
+        // // es6
+        // const name6 = 'Pavan';
+        // let age6 = 22;
+        // name6 = 'Pavan'
+        // console.log(name6);
+        /*
+        function driverLicence5(passedTest){
+            var  firstName = 'Pavan';
+                var yearOfBirth = 1992;
+
+            if (passedTest === true){
+                
+                console.log(firstName + 'born in ' + yearOfBirth + 'is now Officially allowed  to Drive a Car')
+            } else if(passedTest === false ){
+                console.log(firstName + ' born in ' + yearOfBirth + 'is already a Pro  rider')
+            }
+        }
+        driverLicence5(false) */
+
+        // Es6
+        // function driverLicence6(PassedTest2) { 
+
+        //     let firstName ;
+        //     const yearOfBirth = 1992;
+
+        //     if (PassedTest2){
+        //         firstName = 'John'
+        //     }
+        //     console.log(firstName + ' born in' + yearOfBirth + 'is now allowed to drive a car')
+
+        //  }
+        //  driverLicence6(true)
+
+
+
+        //  let i = 25;
+
+        // var Pavan = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        // Pavan.push(10);
+        // Pavan.unshift(1)
+
+        // for (let i = 1; i < Pavan.length; i++) {
+        //     console.log(i)
+        // }
+
+        // console.log(i)
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

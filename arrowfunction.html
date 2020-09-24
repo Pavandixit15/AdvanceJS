@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2></h2>
+
+
+    <script>
+        const years = [1991,1992,1993,1994,1995];
+
+        //ES5
+
+        var ages5 = years.map(function(el){
+            return 2020-el;
+        });
+
+        console.log(ages5);
+
+        // ES6
+
+        let ages6 = years.map(el => 2021-el)
+        console.log(ages6)
+
+        ages6 = years.map((el,index) => `age element ${index + 1}: ${2020-el}.`);
+
+        console.log(ages6)
+
+        ages6 = years.map((el,index)=> {
+            const now = new 
+            Date().getFullYear();
+            const age = now - el ;
+
+            return `age element ${index + 1}: ${2016-el}.`
+        });
+
+
+
+
+
+        
+        
+    </script>
+</body>
+</html>

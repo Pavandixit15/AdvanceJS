@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>template literal is very help full for console in es 5 we append to  add variable but in ES6 here we simply write it using ${firstName} ${lastName}</h2>
+
+    <script>
+        let firstName =  'John';
+        let lastName = 'Smith';
+        const yearofBirth = 1992;
+        function calcAge(year) {
+            return 2020-yearofBirth;
+          }
+
+          console.log(`Hi  this is ${firstName} ${lastName} and i was born in ${yearofBirth} and my age is ${calcAge(yearofBirth)} years old`)
+
+          
+
+        //   New way to add strings
+          const n = `${firstName} ${lastName}` ;
+          console.log(n.startsWith('J')) //startswith is to check the first letter of string
+          console.log(n.endsWith('th'))
+          console.log(n.includes(' '));
+          console.log(`${firstName } ` .repeat(5));
+    </script>
+</body>
+</html>

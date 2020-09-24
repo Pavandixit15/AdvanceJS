@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<script>
+
+
+function CalculateAge(yearOfbirth) {
+    return 2020 -yearOfbirth;
+  }
+  var agePavan = CalculateAge(1992);
+  var ageJane = CalculateAge(1991)
+  var ageJohn = CalculateAge(1993);
+document.write('he is ' + agePavan + '<br>' + ageJane)
+
+
+function yearuntilRetirement(year,firstName){
+    var age = CalculateAge(year);
+    var  retirement = 65-age;
+    if(retirement > 0){
+        console.log(firstName + ' retires in '+ retirement + ' years ')
+    }else{
+        console.log(firstName + 'is already retired');
+    }
+   
+}
+yearuntilRetirement(1994,'Pavan');
+yearuntilRetirement(1999 , 'Rahul');
+yearuntilRetirement(1945, 'Kishore Kumar')
+
+
+
+
+function ageCalc(yearOfbirth){
+    return 2021-yearOfbirth
+}
+var calc = ageCalc(1955);
+console.log(calc);
+
+
+
+function yearsforMarriage(years , firstName){
+    var age = ageCalc(years);
+    var Marriage =  2021-age;
+    console.log(firstName + 'gets married at' + Marriage)
+} 
+
+yearsforMarriage(1992, 'Pavan');
+yearsforMarriage(2019,'Rahul')
+
+
+
+
+
+        // coding challenge 3 
+
+
+        function tipCalculator(bill) {
+            var percentage;
+            if(bill < 50){
+                Percentage = .2;
+            } else if (bill >= 50 && bill < 200){
+                Percentage = .15;
+            } else{
+                Percentage = .1;
+            }
+            return Percentage * bill;
+          }
+          
+
+          var  bills = [124,48,268];
+          var tips =[ tipCalculator(bills[0]),
+                        tipCalculator(bills[1]),
+                        tipCalculator(bills[2])];
+          var finalValues = [bills[0]+ tips[0],
+                            bills[1] + tips[1],
+                            bills[2] + tips[2]];
+
+                        console.log(tips , finalValues );
+
+
+
+
+</script>
+    
+</body>
+</html>

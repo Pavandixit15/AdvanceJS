@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>JavaScript arrays are used to store multiple values in a single variable.</h3>
+    <h3><b>Push</b> Method : The push() method adds new items to the end of an array, and returns the new length.</h3> <br>
+    <h3><b>POP</b> Method : The pop method removes the last element from an array and returns that value to the caller. pop is intentionally generic; this method can be called or applied to objects resembling arrays. </h3> <br>
+    <h3>The <b>shift</b> method removes the element at the zeroeth index and shifts the values at consecutive indexes down, then returns the removed value. If the length property is 0, undefined is returned. shift is intentionally generic; this method can be called or applied to objects resembling arrays</h3>
+    <h3><b>UNshift </b> Method  takes values, adds them to the beginning of an array and returns the new modified length of the array.</h3>
+    <h3><b>Slice</b> method The slice() method returns a shallow copy of a portion of an array into a new array object selected from start to end ( end not included) where start and end represent the index of items in that array</h3>
+
+    <h3><b>Splice</b> method The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place</h3>
+    <script>
+        
+        // var  names = ['Pavan', 'Umesh', 'john', 'jane']
+        // var years = new Array (1992,1991,1993,1994); // another way of array by using New array
+        // console.log(names[2]);
+        // console.log(names.length); // the length of array 
+
+        // // Mutating  arrays
+
+        // names[1] = 'Dixit'; //mutating the data at number 2
+        // names[names.length] = 'Umesh' // this is used for adding the data at end  of the array  or  at last
+        // console.log(names);
+
+        // // different data types in arrays
+
+        // var john = ['sachin','Tendulkar',1990,'designer', false];
+        // john.push('Football') //Push method add an array in  the end 
+        // john.unshift('Mr') // unshift Method add an array in  the beggining
+
+        // john.pop() // Removes an last data from array
+        // john.shift() // Removes an  data from beggining array
+
+        // console.log(john.indexOf(23)) // if the entered data in not there in array  then it will show as -1
+
+        // // using terrinary operator
+        // var isDesigner = john.indexOf('designer') === -1 ? 
+
+        // 'John is not a designer': 'john is a good Designer';
+
+        // console.log(isDesigner)
+
+
+        // coding challenge 3 
+
+
+        // function tipCalculator(bill) {
+        //     var percentage;
+        //     if(bill < 50){
+        //         Percentage = .2;
+        //     } else if (bill >= 50 && bill < 200){
+        //         Percentage = .15;
+        //     } else{
+        //         Percentage = .1;
+        //     }
+        //     return Percentage * bill;
+        //   }
+          
+
+        //   var  bills = [124,48,268];
+        //   var tips =[ tipCalculator(bills[0]),
+        //                 tipCalculator(bills[1]),
+        //                 tipCalculator(bills[2])];
+
+        //                 console.log(tips);
+        // }
+
+
+
+
+
+        // var years = new Array (1992,1993,1994,1995);
+        // years.push = 1996;
+        // years.pop  = [1]
+        // console.log(years.length)
+
+        // console.log(years)
+
+
+        // // mutating arrays
+
+        // years[1] = 'Pavan';
+        // console.log(years)
+
+        // var John = ['sachin','Pavan','Dixit','developer', 1992]
+        // John.push('Sadhana')
+
+        // John.unshift('Mr')
+        // console.log(John);
+
+        // John.shift()
+        // console.log(John)
+
+        // using Terrinary Operator 
+
+        // var isDesigner = John.indexOf('designer') === -1 ?
+        // 'John is not a Good Designer' : 'John is good Designer'
+        // console.log(isDesigner);
+
+        // function tipCalculator(bill) { 
+        //     var Percentage ;
+        //     if(bill<50){
+        //         Percentage = .2;
+        //     } else if(bill >= 50 && bill < 200){
+        //         Percentage = .15;
+        //     } else{
+        //         Percentage = .1;
+        //     }
+        //     return Percentage * bill;
+
+        //     var Bill = [124,48,268];
+        //  var tips = [ tipCalculator(bills[0]),
+        //                 tipCalculator(bills[1]),
+        //                 tipCalculator(bills[2])];
+            
+        //  console.log(tipCalculator.bill);
+            
+        //  }
+
+
+
+       
+
+
+</script>
+
+
+
+
+
+
+       
+</body>
+</html>
